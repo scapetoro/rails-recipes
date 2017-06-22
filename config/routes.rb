@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resource :user
+
   devise_for :users
 
   resources :events
@@ -10,5 +12,7 @@ Rails.application.routes.draw do
   end
 
   root "events#index"
+
+  get "/faq" => "pages#faq"
 
 end
